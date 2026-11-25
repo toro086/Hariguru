@@ -1,0 +1,180 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=1, minimum-scale=1, maximum-scale=5"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+
+  <title>Selamat Hari Guru - SMK Wikrama</title>
+
+  <link href="https://toro086.github.io/Withyou/style.css" rel="stylesheet" type="text/css"/>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Shippori+Antique:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.all.min.js"></script>
+  <script src="https://unpkg.com/typeit@8.7.0/dist/index.umd.js"></script>
+  <script src="https://kit.fontawesome.com/4f3ce16e3e.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+  <!-- Audio -->
+  <audio src="https://dn710808.ca.archive.org/0/items/LaguWajibNasionalLengkap/Hymne%20Guru.ogg" id="linkmp3" class="sembunyi"></audio>
+
+  <div id="bodyblur">
+    <img src="https://i.pinimg.com/736x/1a/40/79/1a40797d79c3588cbaa6ba45b852bdbb.jpg" id="wallpaper"/>
+    <div id="beneranblur"></div>
+  </div>
+
+  <div id="Content">
+
+    <!-- Tombol Kado -->
+    <div id="kadoIn">
+      <img src="https://feeldreams.github.io/kadoin.png"/>
+    </div>
+    <p id="ket">Klik Kadonya!</p>
+
+    <!-- Stiker -->
+    <div class="kumpulanstiker">
+      <img src="https://media.tenor.com/bV_LaU8F8ZMAAAAd/hari-guru-hari-guru-nasional.gif" id="fotostiker"/>
+      <img src="https://i.pinimg.com/originals/dd/56/19/dd561946eec134a65d898450d5003adc.gif" id="fotostiker2"/>
+      <img src="https://i.pinimg.com/originals/dd/56/19/dd561946eec134a65d898450d5003adc.gif" id="fotostiker3"/>
+    </div>
+
+    <!-- Salam Pembuka -->
+    <p id="halo" class="halo">Salam Hangat untuk Guru Hebat!</p>
+
+    <!-- Judul Ucapan -->
+    <p id="halo2" class="halo sty2">Selamat Hari Guru Nasional! ❤️</p>
+
+    <!-- Pesan Utama -->
+    <p id="halo3" class="halo sty3">
+      Terima kasih telah menjadi pelita yang menerangi perjalanan masa depan generasi bangsa.
+    </p>
+
+    <!-- Tanggal Otomatis -->
+    <p id="tanggal" class="halo sty3"></p>
+
+    <!-- Penutup -->
+    <p id="kalimatbawah">Terima Kasih Guruku ❤️</p>
+    <p id="kalimatbawah2" class="sembunyi">Guru Hebat, Indonesia Kuat ❤️</p>
+    <p id="kalimatbawah3" class="sembunyi">Guru Indonesia ❤️</p>
+
+    <div>
+      <blockquote id="bq" data-text="&#9829;">
+
+        <!-- Isi Pesan -->
+        <p id="kalimat">
+          Guru adalah cahaya yang menerangi jalan kehidupan.
+        </p>
+
+        <p id="kalimatb">
+          Terima kasih atas ilmu yang telah Bapak/Ibu berikan.
+        </p>
+
+        <p id="kalimatc">
+          Terima kasih atas kesabaran dalam membimbing kami.
+        </p>
+
+        <p id="kalimatd">
+          Setiap nasihat menjadi bekal untuk meraih masa depan.
+        </p>
+
+        <p id="kalimate">
+          Dedikasi dan ketulusan Bapak/Ibu sungguh sangat berarti.
+        </p>
+
+        <p id="kalimatf">
+          Selamat Hari Guru! Teruslah menginspirasi generasi bangsa. ❤️
+        </p>
+        <p id="opsL">Klik untuk Lanjut</p>
+
+      </blockquote>
+    </div>
+
+    <!-- Tombol Balas -->
+    <div id="Tombol">
+      <a id="By"></a>
+    </div>
+
+    <!-- Pesan WhatsApp -->
+    <span id="pesanWA" class="sembunyi">
+      Selamat Hari Guru Nasional!
+      Terima kasih atas segala ilmu, kesabaran,
+      ketulusan, dan pengabdian Bapak/Ibu Guru.
+      Semoga selalu sehat, bahagia, dan terus
+      menjadi inspirasi bagi generasi penerus bangsa.
+      ❤️
+	 
+
+    </span>
+
+  </div>
+
+  <!-- SCRIPT ASLI FEELDREAMS - DIPERTAHANKAN -->
+  <script>
+    const body = document.querySelector("body");
+    const style = document.createElement('style');
+
+    var today = new Date();
+    var dd = String(today.getDate()).padStart(2, '0');
+    var mm = String(today.getMonth() + 1).padStart(2, '0');
+    var yyyy = today.getFullYear();
+
+    const monthNames = [
+      "Januari", "Februari", "Maret", "April",
+      "Mei", "Juni", "Juli", "Agustus",
+      "September", "Oktober", "November", "Desember"
+    ];
+
+    today = dd + ' ' + monthNames[today.getMonth()] + ' ' + yyyy;
+
+    inikuis=0;
+    ftganti=0;
+    flag=1;
+    flagg=1;
+    fungsi=0;
+    ftfungsi=0;
+    fungsiAwal=0;
+    fungsitimer=0;
+
+    vketikhalo=halo.innerHTML;
+    halo.innerHTML = "";
+
+    vketikhalo2=halo2.innerHTML;
+    halo2.innerHTML = "";
+
+    pesanwhatsapp = pesanWA.innerHTML;
+    deffotostiker=fotostiker.src;
+
+    Content.style = "opacity:1;margin-top:16vh;";
+
+    audio = new Audio('' + linkmp3.src);
+
+    tanggal.innerHTML="- " + today + " -";
+
+    function createHeart() {
+      const heart = document.createElement("div");
+      heart.className = "fas fa-heart";
+      heart.style.left = (Math.random() * 90)+"vw";
+      heart.style.animationDuration = (Math.random()*3)+2+"s";
+      body.appendChild(heart);
+    }
+
+    setInterval(function name(params) {
+      var heartArr = document.querySelectorAll(".fa-heart");
+      if (heartArr.length > 100) {
+        heartArr[0].remove()
+      }
+    },100);
+  </script>
+
+  <!-- SCRIPT ASLI FEELDREAMS -->
+  <script src="https://feeldreams.github.io/withyou/script.js"></script>
+
+</body>
+</html>
